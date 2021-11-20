@@ -1,3 +1,1 @@
-# SwiftUIT
-
-A description of this package.
+# SwiftUIT (Tips)

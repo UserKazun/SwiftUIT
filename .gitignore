@@ -4,5 +4,5 @@
 /*.xcodeproj
 xcuserdata/
 DerivedData/
-.swifttpm
+.swiftpm
 .*.sw?

@@ -12,3 +12,10 @@ Tips and tricks for SwiftUI, including TextField Modifier, Calendar, etc. More u
 
 You can add this package on Xcode.
 See [documentation](https://developer.apple.com/documentation/swift_packages/adding_package_dependencies_to_your_app).
+
+## TTextField
+You can use a TextField for the image. You can treat it just like a normal TextField, since it only has a design applied to it.
+
+![Simulator Screen Shot - iPhone 13 - 2021-12-11 at 22 54 1](https://user-images.githubusercontent.com/34956483/145679398-a89ce2ce-7dee-46c1-84e0-9d205c41fe09.png)
+
+

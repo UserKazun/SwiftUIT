@@ -43,9 +43,9 @@ public struct TTextField: View {
 }
 
 #if DEBUG
-struct TTextFieldView_Previews: PreviewProvider {
+struct TTextField_Previews: PreviewProvider {
     static var previews: some View {
-        TTextFieldView(text: .constant(""), placeholder: "placeholder", icon: "person")
+        TTextField(text: .constant(""), placeholder: "placeholder", icon: "person")
     }
 }
 #endif

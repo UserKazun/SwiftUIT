@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-public struct TTextFieldView: View {
+public struct TTextField: View {
     @Binding private var text: String
     
     public var placeholder: String

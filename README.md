@@ -5,7 +5,7 @@
 [![Twitter](https://img.shields.io/twitter/follow/developer_kazu?style=social)](https://twitter.com/developer_kazu)
 
 # What is SwiftUIT
-Tips and tricks for SwiftUI, including TextField Modifier, Calendar, etc. More updates to come.
+Tips and tricks for SwiftUI, including CustomTextField, etc. More updates to come.
 
 # Installation
 #### Xcode

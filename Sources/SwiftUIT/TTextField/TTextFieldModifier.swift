@@ -10,6 +10,8 @@ import SwiftUI
 public struct TTextFieldModifier: ViewModifier {
     var icon: String
     
+    public init() {}
+    
     public func body(content: Content) -> some View {
         content
             .overlay(

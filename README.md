@@ -24,7 +24,7 @@ struct ContentView: View {
     @State var text: String = ""
     
     var body: some View {
-        TTextFieldView(text: $text, placeholder: "Placeholder", icon: "person")
+        TTextField(text: $text, placeholder: "Placeholder", icon: "person")
     }
 }
 ```

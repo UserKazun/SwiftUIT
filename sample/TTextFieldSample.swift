@@ -11,8 +11,7 @@ struct SwiftUIView: View {
     @State private var text: String = ""
     
     var body: some View {
-        TextField("placeholder", text)
-            .modifier(ttextFieldModifier(icon: "lock"))
+        TTextFieldView(text: $text, placeholder: "Placeholder", icon: "person")
     }
 }
 

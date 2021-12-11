@@ -18,4 +18,13 @@ You can use a TextField for the image. You can treat it just like a normal TextF
 
 ![Simulator Screen Shot - iPhone 13 - 2021-12-11 at 22 54 1](https://user-images.githubusercontent.com/34956483/145679398-a89ce2ce-7dee-46c1-84e0-9d205c41fe09.png)
 
-
+### Example
+```swift
+struct ContentView: View {
+    @State var text: String = ""
+    
+    var body: some View {
+        TTextFieldView(text: $text, placeholder: "Placeholder", icon: "person")
+    }
+}
+```

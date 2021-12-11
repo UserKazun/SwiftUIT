@@ -1,19 +1,27 @@
 //
-//  TTextFielad.swift
+//  TTextFieldView.swift
 //  
 //
-//  Created by kazunari_ueeda on 2021/11/23.
+//  Created by kazunari_ueeda on 2021/12/11.
 //
 
 import SwiftUI
 
-public struct TTextFieldModifier: ViewModifier {
-    var icon: String
+public struct TTextFieldView: View {
+    @Binding private var text: String
     
-    public init() {}
+    public var placeholder: String
+    public var icon: String
     
-    public func body(content: Content) -> some View {
-        content
+    public init(text: Binding<String>, placeholder: String, icon: String) {
+        self._text = text
+        
+        self.placeholder = placeholder
+        self.icon = icon
+    }
+    
+    public var body: some View {
+        TextField(placeholder, text: $text)
             .overlay(
                 HStack {
                     Image(systemName: icon)
@@ -34,8 +42,10 @@ public struct TTextFieldModifier: ViewModifier {
     }
 }
 
-extension View {
-    public func ttextFieldModifier(icon: String) -> some View {
-        self.modifier(TTextFieldModifier(icon: icon))
+#if DEBUG
+struct TTextFieldView_Previews: PreviewProvider {
+    static var previews: some View {
+        TTextFieldView(text: .constant(""), placeholder: "placeholder", icon: "person")
     }
 }
+#endif

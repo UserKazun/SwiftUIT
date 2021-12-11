@@ -33,7 +33,7 @@ public struct TTextFieldModifier: ViewModifier {
 }
 
 extension View {
-    func ttextFieldModifier(icon: String) -> some View {
+    public func ttextFieldModifier(icon: String) -> some View {
         self.modifier(TTextFieldModifier(icon: icon))
     }
 }

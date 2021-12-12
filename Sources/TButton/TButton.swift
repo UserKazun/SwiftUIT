@@ -8,24 +8,37 @@
 import SwiftUI
 
 public struct TButton<Content: View>: View {
-    @Binding var isAction: Bool
+    @State private var isAction: Bool
     public var onChange: ((Bool) -> Void)?
-    public var content: Content
+    public var trueContent: Content
+    public var falseContent: Content
     
-    public init(isAction: Binding<Bool>, onChange: ((Bool) -> Void)? = nil, @ViewBuilder content: () -> Content) {
-        self._isAction = isAction
+    public init(
+        _ initialValue: Bool,
+        onChange: ((Bool) -> Void)? = nil,
+        @ViewBuilder trueContent: () -> Content,
+        @ViewBuilder falseContent: () -> Content
+    ) {
+        self._isAction = State(wrappedValue: initialValue)
         self.onChange = onChange
-        self.content = content()
+        self.trueContent = trueContent()
+        self.falseContent = falseContent()
     }
     
     public var body: some View {
         Button(action: {
+            isAction.toggle()
             onChange?(isAction)
         }, label: {
-            content
+            if isAction {
+                trueContent
+            } else {
+                falseContent
+            }
         })
     }
 }
+
 
 struct TButton_Previews: PreviewProvider {
     static var previews: some View {

@@ -12,13 +12,15 @@ struct TButtonSample: View {
     @State var buttonText: String = ""
     
     var body: some View {
-        TButton(isAction: $isAction, onChange: { _ in
-            buttonText = "pushed"
-        }) {
-            Text("Button")
-        }
-        
-        Text(buttonText)
+        TButton(true, onChange:  { _ in
+            // Elements to be switched and displayed, such as text.
+        },
+                trueContent: {
+            Text("true")
+        },
+                falseContent: {
+            Text("false")
+        })
     }
 }
 

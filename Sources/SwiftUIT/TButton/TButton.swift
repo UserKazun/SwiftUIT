@@ -42,6 +42,6 @@ public struct TButton<Content: View>: View {
 
 struct TButton_Previews: PreviewProvider {
     static var previews: some View {
-        TButton()
+        TButton(true, trueContent: {  Text("True") }, falseContent: { Text("false") })
     }
 }
